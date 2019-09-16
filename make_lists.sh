@@ -3,7 +3,7 @@
 seeds="good bad"
 for seed in $seeds; do
 	cat $seed.seed|
-	while read word; do
-		bash ./recurse.sh $word 
+	while read seed; do
+		bash ./recurse.sh $seed
 	done|sort|uniq >> $seed.list
 done
